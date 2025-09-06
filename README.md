@@ -13,45 +13,45 @@ Gradio 可视化 Demo（端口 8783），对外提供一个网页界面（0.0.0.
 没有对本地其他文件的要求，只有对python环境依赖库的要求<br>
 需要安装的库有：
 注意：wheel轮子要单独下载<br>
-··· 
-conda activate <你的环境>
-export PYTHONNOUSERSITE=1
-python -m pip install -U \
-  "gradio==4.44.1" "gradio_client==1.3.0" "pydantic==2.10.6" "fastapi==0.115.11" "uvicorn==0.30.6" "anyio==4.1.0" \
-  "Pillow>=10,<11" "decord==0.6.0" "requests==2.32.3" "numpy>=1.26,<2.0" "distro==1.7" "transformers>=4.41,<5" \
-  torch torchvision --extra-index-url https://download.pytorch.org/whl/cu121
-#安装 modelscope_studio 本地 whl
-python -m pip install -U /home/server/project/MiniCPM-o/modelscope_studio-0.4.0.9-py3-none-any.whl
-#配 API Key
-export SILICONFLOW_API_KEY="你的key"
-#运行
-python /home/server/project/MiniCPM-o/web_demos/web_demo_V3.0.py --device cuda
-#浏览器访问：http://<服务器IP>:8780
-··· 
-输出：
-··· 
-(web_demo) server@server-Precision-7920-Tower:~/Pictures$ python /home/server/project/MiniCPM-o/web_demos/web_demo_V3.0.py --device cuda
-woshi tab lide txt = <modelscope_studio.components.MultimodalInput.ModelScopeMultimodalInput object at 0x73b000757430>
-/home/server/anaconda3/envs/web_demo/lib/python3.10/site-packages/gradio/utils.py:1002: UserWarning: Expected 4 arguments for function <function clear at 0x73b000d54f70>, received 3.
-  warnings.warn(
-/home/server/anaconda3/envs/web_demo/lib/python3.10/site-packages/gradio/utils.py:1006: UserWarning: Expected at least 4 arguments for function <function clear at 0x73b000d54f70>, received 3.
-  warnings.warn(
-Running on local URL:  http://0.0.0.0:8783
+··· <br>
+conda activate <你的环境><br>
+export PYTHONNOUSERSITE=1<br>
+python -m pip install -U \<br>
+  "gradio==4.44.1" "gradio_client==1.3.0" "pydantic==2.10.6" "fastapi==0.115.11" "uvicorn==0.30.6" "anyio==4.1.0" \<br>
+  "Pillow>=10,<11" "decord==0.6.0" "requests==2.32.3" "numpy>=1.26,<2.0" "distro==1.7" "transformers>=4.41,<5" \<br>
+  torch torchvision --extra-index-url https://download.pytorch.org/whl/cu121<br>
+#安装 modelscope_studio 本地 whl<br>
+python -m pip install -U /home/server/project/MiniCPM-o/modelscope_studio-0.4.0.9-py3-none-any.whl<br>
+#配 API Key<br>
+export SILICONFLOW_API_KEY="你的key"<br>
+#运行<br>
+python /home/server/project/MiniCPM-o/web_demos/web_demo_V3.0.py --device cuda<br>
+#浏览器访问：http://<服务器IP>:8780<br>
+··· <br>
+输出：<br>
+··· <br>
+(web_demo) server@server-Precision-7920-Tower:~/Pictures$ python /home/server/project/MiniCPM-o/web_demos/web_demo_V3.0.py --device cuda<br>
+woshi tab lide txt = <modelscope_studio.components.MultimodalInput.ModelScopeMultimodalInput object at 0x73b000757430><br>
+/home/server/anaconda3/envs/web_demo/lib/python3.10/site-packages/gradio/utils.py:1002: UserWarning: Expected 4 arguments for function <function clear at 0x73b000d54f70>, received 3.<br>
+  warnings.warn(<br>
+/home/server/anaconda3/envs/web_demo/lib/python3.10/site-packages/gradio/utils.py:1006: UserWarning: Expected at least 4 arguments for function <function clear at 0x73b000d54f70>, received 3.<br>
+  warnings.warn(<br>
+Running on local URL:  http://0.0.0.0:8783<br>
 
-To create a public link, set `share=True` in `launch()`. 
---------
-  warnings.warn(
-Debug: Uploaded files = ['/tmp/gradio/d9880485c1b4b1a0f685cd5929c26d58a8006a67eb6ff27ca5f297f0f858bcba/2.jpg']
-respond里面的question文本 = 1
-respond里面的文件路径 = []
-woshiencode-message =  files=[] text='1'
-encode image for api= ['/tmp/gradio/d9880485c1b4b1a0f685cd5929c26d58a8006a67eb6ff27ca5f297f0f858bcba/2.jpg']
-我是= /tmp/gradio/d9880485c1b4b1a0f685cd5929c26d58a8006a67eb6ff27ca5f297f0f858bcba/2.jpg
-Debug: API Request Payload = {'model': 'Qwen/Qwen2.5-VL-72B-Instruct', 'messages': [{'role': 'user', 'content': []}], 'stream': False, 'max_tokens': 512, 'temperature': 0.7, 'top_p': 0.7, 'top_k': 50, 'frequency_penalty': 0.5}
-Debug: Gallery output = [('/tmp/gradio/d9880485c1b4b1a0f685cd5929c26d58a8006a67eb6ff27ca5f297f0f858bcba/2.jpg', '')]
-txt =  []
-··· 
-虽然还是有很明显的问题，但至少可以使用了。注意pydantic的版本必须是2.10.6，改了就会报错
+To create a public link, set `share=True` in `launch()`. <br>
+--------<br>
+  warnings.warn(<br>
+Debug: Uploaded files = ['/tmp/gradio/d9880485c1b4b1a0f685cd5929c26d58a8006a67eb6ff27ca5f297f0f858bcba/2.jpg']<br>
+respond里面的question文本 = 1<br>
+respond里面的文件路径 = []<br>
+woshiencode-message =  files=[] text='1'<br>
+encode image for api= ['/tmp/gradio/d9880485c1b4b1a0f685cd5929c26d58a8006a67eb6ff27ca5f297f0f858bcba/2.jpg']<br>
+我是= /tmp/gradio/d9880485c1b4b1a0f685cd5929c26d58a8006a67eb6ff27ca5f297f0f858bcba/2.jpg<br>
+Debug: API Request Payload = {'model': 'Qwen/Qwen2.5-VL-72B-Instruct', 'messages': [{'role': 'user', 'content': []}], 'stream': False, 'max_tokens': 512, 'temperature': 0.7, 'top_p': 0.7, 'top_k': 50, 'frequency_penalty': 0.5}<br>
+Debug: Gallery output = [('/tmp/gradio/d9880485c1b4b1a0f685cd5929c26d58a8006a67eb6ff27ca5f297f0f858bcba/2.jpg', '')]<br>
+txt =  []<br>
+··· <br>
+虽然还是有很明显的问题，但至少可以使用了。注意pydantic的版本必须是2.10.6，改了就会报错<br>
 
 #### 本地文件准备：
 1/常见事例里：<br>
