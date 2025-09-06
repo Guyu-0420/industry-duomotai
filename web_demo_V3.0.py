@@ -52,8 +52,8 @@ def call_silicon_flow_api(text="who are you", image_data_list=None, custom_rules
     }
     # 请求体
     payload = {
-        # "model": "Qwen/Qwen2.5-VL-72B-Instruct",  # 模型可更换
-        "model": "Pro/Qwen/Qwen2.5-VL-7B-Instruct",  
+        "model": "Qwen/Qwen2.5-VL-72B-Instruct",  # 模型可更换
+        # "model": "Pro/Qwen/Qwen2.5-VL-7B-Instruct",  
         
         "messages": [
             {
@@ -894,3 +894,4 @@ with gr.Blocks(css=css) as demo:
 
 # launch
 demo.launch(share=False, debug=True, show_api=False, server_port=8783, server_name="0.0.0.0")
+# demo.launch(share=True, debug=True, show_api=False, server_port=8780, server_name="0.0.0.0")
