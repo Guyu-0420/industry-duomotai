@@ -13,7 +13,7 @@ Gradio 可视化 Demo（端口 8783），对外提供一个网页界面（0.0.0.
 没有对本地其他文件的要求，只有对python环境依赖库的要求<br>
 需要安装的库有：
 注意：wheel轮子要单独下载<br>
-···
+··· 
 conda activate <你的环境>
 export PYTHONNOUSERSITE=1
 python -m pip install -U \
@@ -27,9 +27,9 @@ export SILICONFLOW_API_KEY="你的key"
 #运行
 python /home/server/project/MiniCPM-o/web_demos/web_demo_V3.0.py --device cuda
 #浏览器访问：http://<服务器IP>:8780
-···
+··· 
 输出：
-···
+··· 
 (web_demo) server@server-Precision-7920-Tower:~/Pictures$ python /home/server/project/MiniCPM-o/web_demos/web_demo_V3.0.py --device cuda
 woshi tab lide txt = <modelscope_studio.components.MultimodalInput.ModelScopeMultimodalInput object at 0x73b000757430>
 /home/server/anaconda3/envs/web_demo/lib/python3.10/site-packages/gradio/utils.py:1002: UserWarning: Expected 4 arguments for function <function clear at 0x73b000d54f70>, received 3.
@@ -50,7 +50,7 @@ encode image for api= ['/tmp/gradio/d9880485c1b4b1a0f685cd5929c26d58a8006a67eb6f
 Debug: API Request Payload = {'model': 'Qwen/Qwen2.5-VL-72B-Instruct', 'messages': [{'role': 'user', 'content': []}], 'stream': False, 'max_tokens': 512, 'temperature': 0.7, 'top_p': 0.7, 'top_k': 50, 'frequency_penalty': 0.5}
 Debug: Gallery output = [('/tmp/gradio/d9880485c1b4b1a0f685cd5929c26d58a8006a67eb6ff27ca5f297f0f858bcba/2.jpg', '')]
 txt =  []
-···
+··· 
 虽然还是有很明显的问题，但至少可以使用了。注意pydantic的版本必须是2.10.6，改了就会报错
 
 #### 本地文件准备：
