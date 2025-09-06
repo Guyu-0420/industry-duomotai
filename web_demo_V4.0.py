@@ -849,4 +849,4 @@ with gr.Blocks(css=css) as demo:
 
 
 # launch
-demo.launch(share=False, debug=True, show_api=False, server_port=8780, server_name="0.0.0.0")
+demo.launch(share=True, debug=True, show_api=False, server_port=8780, server_name="0.0.0.0")
